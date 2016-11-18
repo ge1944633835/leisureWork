@@ -1,0 +1,59 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SurfaceView
+        android:id="@+id/sfv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/header_left_btn"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:background="@drawable/top_backup"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="15dip"
+        android:visibility="visible"
+        android:text="返回"
+        android:textSize="14sp"
+        android:textColor="#ffffff" />
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/rl_bottom"
+       android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂停" />
+        <SeekBar
+            android:layout_toRightOf="@id/play"
+            android:id="@+id/sk"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100" />
+
+        <ImageView
+            android:id="@+id/bt_full"
+            android:src="@drawable/full"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:text="全屏" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/news"
+            android:icon="@drawable/ic_assessment_white_24dp"
+            android:title="新闻"/>
+        <item
+            android:id="@+id/images"
+            android:icon="@drawable/ic_image_white_24dp"
+            android:title="video"/>
+        <item
+            android:id="@+id/weather"
+            android:icon="@drawable/ic_date_range_white_24dp"
+            android:title="天气"/>
+        <item
+            android:id="@+id/other"
+            android:icon="@drawable/ic_portrait_white_24dp"
+            android:title="项目介绍"/>
+    </group>
+
+
+
+</menu>

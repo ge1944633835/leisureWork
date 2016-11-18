@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LeisureWork</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="name">imSunLight</string>
+
+    <string name="app_description">本APP用来演示Material Design以及MVP设计模式在项目中的使用</string>
+    <string name="app_github_url">APP地址：即将上传....</string>
+    <string name="author">作者：imSunLight</string>
+    <string name="email">邮箱：1944633835@qq.com</string>
+    <string name="blog">博客：http://home.cnblogs.com/u/GeChuangGuang/</string>
+</resources>
