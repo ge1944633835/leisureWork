@@ -3,7 +3,7 @@
 ## 这个是我自己写的个人项目，先看效果：
 
 ### 主页模块：
-
+![主页](https://raw.githubusercontent.com/ge1944633835/leisureWork/master/ScreenShots/homepager.jpg)
 
 
 
