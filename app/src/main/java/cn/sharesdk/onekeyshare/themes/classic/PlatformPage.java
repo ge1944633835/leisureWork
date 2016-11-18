@@ -12,7 +12,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
@@ -94,12 +93,12 @@ public abstract class PlatformPage extends OnekeySharePage {
 
 
 		///////////////增加取消按钮layout
-		lp = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,100);
+		lp = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT);
 		lp.setMargins(0,0,0,0);
 		LinearLayout buttonLayout2 = new LinearLayout(activity);
 		buttonLayout2.setBackgroundColor(Color.WHITE);
 
-		LinearLayout.LayoutParams lp22 = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,60);
+		LinearLayout.LayoutParams lp22 = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT);
 		lp22.setMargins(20, 20, 20, 20);
 		Button button2 = new Button(activity);
 		button2.setText("取消分享");
