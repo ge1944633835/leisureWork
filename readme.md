@@ -18,3 +18,5 @@
 
 4. 在video模块采用的是jcvideoolayer开源库，也涉及到shareSdk社会化分享等等
 
+## apk文件下载：
+[点击下载]( http://fir.im/elwf) 
