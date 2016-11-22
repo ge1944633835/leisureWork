@@ -100,6 +100,7 @@ public class VideoListFragment extends Fragment implements VideoView, SwipeRefre
                     && mAdapter.isShowFooter()) {
                 //加载更多
                 mVideoPresenter.getVideoData(start + 10);
+                start+=10;
             }
         }
     };
@@ -128,11 +129,20 @@ public class VideoListFragment extends Fragment implements VideoView, SwipeRefre
     public void VideoList(final List<VideoBean.VideoInfo> videoInfoList) {
         Log.d(TAG, "VideoList() returned: " + videoInfoList.toString());
         mList.addAll(videoInfoList);
+        if(mAdapter!=null){
+            mAdapter.isShowFooter(true);
+            mAdapter.notifyDataSetChanged();
+        }
         if (isFirstLoad) {
             mAdapter = new VideoAdapter(mContext, mList);
             mRecyclerView.setAdapter(mAdapter);
             isFirstLoad = false;
         } else {
+            if(videoInfoList.size()==0){
+               if(mAdapter.isShowFooter()){
+                   mAdapter.isShowFooter(false);
+               }
+            }
             mAdapter.notifyDataSetChanged();
         }
         mAdapter.setOnItemShareClickListener(new VideoAdapter.OnItemShareClickListener() {
@@ -186,6 +196,8 @@ public class VideoListFragment extends Fragment implements VideoView, SwipeRefre
         Toast.makeText(getActivity(), error, Toast.LENGTH_SHORT).show();
         Log.d(TAG, "showError() returned: " + error);
         hideProgress();
+        mAdapter.isShowFooter(false);
+        mAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -193,6 +205,7 @@ public class VideoListFragment extends Fragment implements VideoView, SwipeRefre
         //在线视频
         mList.clear();
         Toast.makeText(getActivity(), "在线视频", Toast.LENGTH_SHORT).show();
+        start=0;
         mVideoPresenter.getVideoData(start);
 
     }

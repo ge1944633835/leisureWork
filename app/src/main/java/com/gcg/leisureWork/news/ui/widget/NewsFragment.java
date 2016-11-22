@@ -111,6 +111,7 @@ public class NewsFragment extends Fragment implements NewsView, SwipeRefreshLayo
                     && mReCyclerView_adapter.isShowFooter()) {
                 //加载更多
                 mNewsPresenter.getNewsData(start + 20, channel);
+                start+=20;
             }
         }
     };
@@ -182,6 +183,7 @@ public class NewsFragment extends Fragment implements NewsView, SwipeRefreshLayo
         if (mList != null) {
             mList.clear();
         }
+        start=0;
         Log.d("gg", "onCreateView() returned:刷新---》 " +mList.size());
         mNewsPresenter.getNewsData(start, channel);
     }
