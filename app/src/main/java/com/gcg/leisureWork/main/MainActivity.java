@@ -19,6 +19,7 @@ import com.gcg.leisureWork.commons.beans.CityEvent;
 import com.gcg.leisureWork.main.presenter.MainPresenter;
 import com.gcg.leisureWork.main.presenter.MainPresenterImpl;
 import com.gcg.leisureWork.main.view.MainView;
+import com.gcg.leisureWork.news.ui.widget.NewsListFragment;
 import com.gcg.leisureWork.video.ui.widget.VideoFragment;
 import com.gcg.leisureWork.weather.ui.widget.ProvincepickerActivity;
 import com.gcg.leisureWork.weather.ui.widget.WeatherFragment;
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     @Override
     public void switch2news() {
         pickcity.setVisibility(View.INVISIBLE);
-//            getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new NewsListFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new NewsListFragment()).commit();
     }
     @Override
     public void switch2image() {

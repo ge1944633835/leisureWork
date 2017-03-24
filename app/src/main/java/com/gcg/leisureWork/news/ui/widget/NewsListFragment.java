@@ -62,10 +62,6 @@ public class NewsListFragment extends Fragment {
         mViewPagerAdapter.addFragment(NewsFragment.newInstance(NEWS_TYPE_YULE), "娱乐");
         mViewPagerAdapter.addFragment(NewsFragment.newInstance(NEWS_TYPE_SPORTS), "体育");
         mViewPagerAdapter.addFragment(NewsFragment.newInstance(NEWS_TYPE_NBA), "NBA");
-//        mViewPagerAdapter.addFragment(new TopFragment(), "头条");
-//        mViewPagerAdapter.addFragment(new YLFragment(), "娱乐");
-//        mViewPagerAdapter.addFragment(new PlayFragment(), "体育");
-//        mViewPagerAdapter.addFragment(new NBAFragment(), "NBA");
 
         mViewPager.setAdapter(mViewPagerAdapter);
     }

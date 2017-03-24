@@ -62,7 +62,6 @@ public class NewsFragment extends Fragment implements NewsView, SwipeRefreshLayo
         channel = mType;
         Log.d("xyz", "onCreate() returned:初次创建---》 " + channel);
         mNewsPresenter = new NewsPresenterImpl(mNewsView, channel, 0);
-        Log.d("xyz", "onCreate() returned:初次创建mNewsPresenter---》 " + mNewsPresenter.toString());
     }
 
     @Nullable
